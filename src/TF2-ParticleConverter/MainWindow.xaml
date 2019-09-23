@@ -1,0 +1,89 @@
+﻿<Window x:Class="TF2_ParticleConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TF2_ParticleConverter"
+        mc:Ignorable="d"
+        Title="Team Fortress 2 - Particle Converter"
+        Height="240" Width="410"
+        Background="#332F2C">
+    
+    <Grid>
+        <GroupBox
+            Header="GroupBox"
+            Foreground="White"
+            HorizontalAlignment="Left"
+            Height="100" Margin="10,0,0,0"
+            VerticalAlignment="Top"
+            Width="192">
+
+            <Grid>
+                <CheckBox
+                    x:Name="LoopMaterial"
+                    Content="Loop the material file?"
+                    Foreground="White"
+                    HorizontalAlignment="Left"
+                    Margin="10,10,0,0"
+                    VerticalAlignment="Top"
+                    IsChecked="True" />
+
+                <CheckBox
+                    x:Name="CreateVMT"
+                    Content="Create a VMT file?"
+                    Foreground="White"
+                    HorizontalAlignment="Left"
+                    Margin="10,30,0,0"
+                    VerticalAlignment="Top"
+                    IsChecked="True" />
+
+                <CheckBox
+                    x:Name="BlendFrames"
+                    Content="Blend material file frames?"
+                    Foreground="White"
+                    HorizontalAlignment="Left"
+                    Margin="10,50,0,0"
+                    VerticalAlignment="Top"
+                    IsChecked="True" />
+            </Grid>
+        </GroupBox>
+
+        <Button
+            x:Name="Convert"
+            Content="Convert"
+            Click="Convert_Click"
+            HorizontalAlignment="Left"
+            Margin="10,108,0,0"
+            VerticalAlignment="Top"
+            Width="90"
+            Style="{StaticResource Button}" />
+
+        <Button
+            x:Name="Refresh"
+            Content="Refresh"
+            Click="Refresh_Click"
+            HorizontalAlignment="Left"
+            Margin="112,108,0,0"
+            VerticalAlignment="Top"
+            Width="90"
+            Style="{StaticResource Button}" />
+
+        <TextBlock
+            x:Name="Status"
+            Text="..."
+            Foreground="White"
+            HorizontalAlignment="Left"
+            Margin="10,131,0,0"
+            VerticalAlignment="Top"
+            Width="192" Height="68"
+            TextWrapping="Wrap" />
+
+        <ListBox
+            x:Name="FileList"
+            HorizontalAlignment="Left"
+            Margin="216,10,0,0"
+            VerticalAlignment="Top"
+            Width="166" Height="179"
+            IsEnabled="False" />
+    </Grid>
+</Window>
