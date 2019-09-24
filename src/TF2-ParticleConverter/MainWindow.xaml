@@ -8,10 +8,10 @@
         Title="Team Fortress 2 - Particle Converter"
         Height="240" Width="410"
         Background="#332F2C">
-    
+
     <Grid>
         <GroupBox
-            Header="GroupBox"
+            Header="Options"
             Foreground="White"
             HorizontalAlignment="Left"
             Height="100" Margin="10,0,0,0"
@@ -78,12 +78,21 @@
             Width="192" Height="68"
             TextWrapping="Wrap" />
 
-        <ListBox
-            x:Name="FileList"
+        <GroupBox
+            Header="File List"
+            Foreground="White"
             HorizontalAlignment="Left"
-            Margin="216,10,0,0"
-            VerticalAlignment="Top"
-            Width="166" Height="179"
-            IsEnabled="False" />
+            Margin="207,0,10.2,10.4"
+            VerticalAlignment="Top">
+
+            <Grid>
+                <ListBox
+                    x:Name="FileList"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Width="166" Height="179"
+                    MouseDoubleClick="FileList_MouseDoubleClick" />
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
