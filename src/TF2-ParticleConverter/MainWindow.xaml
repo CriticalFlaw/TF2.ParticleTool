@@ -6,15 +6,30 @@
         xmlns:local="clr-namespace:TF2_ParticleConverter"
         mc:Ignorable="d"
         Title="Team Fortress 2 - Particle Converter"
-        Height="240" Width="410"
-        Background="#332F2C">
+        Height="280" Width="410"
+        Background="#332F2C"
+        ResizeMode="CanMinimize">
 
     <Grid>
+        <Label
+            Content="File Name:"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="5,13,0,0"
+            Foreground="White" />
+
+        <TextBox
+            x:Name="ExportName"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="76,16,0,0"
+            Height="23" Width="122" />
+
         <GroupBox
             Header="Options"
             Foreground="White"
             HorizontalAlignment="Left"
-            Height="100" Margin="10,0,0,0"
+            Height="100" Margin="10,44,0,0"
             VerticalAlignment="Top"
             Width="192">
 
@@ -44,7 +59,7 @@
                     HorizontalAlignment="Left"
                     Margin="10,50,0,0"
                     VerticalAlignment="Top"
-                    IsChecked="True" />
+                    IsChecked="False" />
             </Grid>
         </GroupBox>
 
@@ -53,7 +68,7 @@
             Content="Convert"
             Click="Convert_Click"
             HorizontalAlignment="Left"
-            Margin="10,108,0,0"
+            Margin="10,149,0,0"
             VerticalAlignment="Top"
             Width="90"
             Style="{StaticResource Button}" />
@@ -63,7 +78,7 @@
             Content="Refresh"
             Click="Refresh_Click"
             HorizontalAlignment="Left"
-            Margin="112,108,0,0"
+            Margin="112,149,0,0"
             VerticalAlignment="Top"
             Width="90"
             Style="{StaticResource Button}" />
@@ -73,7 +88,7 @@
             Text="..."
             Foreground="White"
             HorizontalAlignment="Left"
-            Margin="10,131,0,0"
+            Margin="10,172,0,0"
             VerticalAlignment="Top"
             Width="192" Height="68"
             TextWrapping="Wrap" />
@@ -82,15 +97,15 @@
             Header="File List"
             Foreground="White"
             HorizontalAlignment="Left"
-            Margin="207,0,10.2,10.4"
-            VerticalAlignment="Top">
+            Margin="207,0,0,0"
+            VerticalAlignment="Top" Height="240">
 
             <Grid>
                 <ListBox
                     x:Name="FileList"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="166" Height="179"
+                    Width="166" Height="218"
                     MouseDoubleClick="FileList_MouseDoubleClick" />
             </Grid>
         </GroupBox>
