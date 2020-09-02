@@ -1,0 +1,400 @@
+/*
+   Team Fortress 2 UI Kit
+   Created by github.com/GingerBunny
+*/
+
+/* Fonts */
+@font-face {
+    font-family: 'Tf2build';
+    src: url(../Resources/tf2build.ttf);
+}
+
+@font-face {
+    font-family: 'Tf2secondary';
+    src: url(../Resources/TF2secondary.ttf);
+}
+
+/* Colours */
+
+:root {
+    --quality-normal: #B2B2B2;
+    --quality-unique: #FFD700;
+    --quality-vintage: #476291;
+    --quality-genuine: #4D7455;
+    --quality-strange: #CF6A32;
+    --quality-unusual: #8650AC;
+    --quality-haunted: #38F3AB;
+    --quality-collectors: #AA0000;
+    --quality-decorated: #FAFAFA;
+    --quality-community: #70B04A;
+    --quality-valve: #A50F79;
+    --positive-att: #99CCFF;
+    --negative-att: #FF4040;
+    --neutral-att: #EBE2CA;
+    --background-mid: #3C352D;
+    --background-dark: #2B2724;
+    --background-darkest: #221E1B;
+    --button-background: #776B5F;
+    --button-hover: #934739;
+    --item-title: #756B5E;
+    --item-hover: #B19600;
+    --item-gradient-top: #38332D;
+    --item-gradient-bottom: #221F1A;
+    --text-highlight: #C95138;
+    --text-regular: #A49E9E;
+    --killfeed-light: #E0D2B5;
+    --teamspirit-red: #B8383B;
+    --teamspirit-blu: #5885A2;
+}
+
+/* Body */
+
+body {
+    background-color: var(--background-dark);
+    font-family: 'Tf2secondary', sans-serif;
+    font-size: 18px;
+}
+
+/* Layout */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-col3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-col4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-col5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-col6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-gap {
+    column-gap: 20px;
+}
+
+.padded-box {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--neutral-att);
+    font-family: 'Tf2build', sans-serif;
+    font-weight: 400;
+}
+
+/* Paragraphs */
+
+p {
+    color: var(--text-regular);
+    font-family: 'Tf2secondary', sans-serif;
+    line-height: 1.35;
+}
+
+    p.text-large {
+        font-size: 26px;
+    }
+
+/* Links */
+
+a {
+    color: var(--text-regular);
+    transition: 0.3s;
+}
+
+    a:hover {
+        color: var(--text-highlight);
+    }
+
+/* Buttons */
+
+button {
+    background-color: var(--button-background);
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--neutral-att);
+    cursor: pointer;
+    font-family: 'Tf2build', sans-serif;
+    font-size: 22px;
+    padding: 8px 20px;
+    transition: 0.3s;
+}
+
+    button.dark-button {
+        background-color: var(--background-dark);
+    }
+
+    button:hover {
+        background-color: var(--button-hover);
+    }
+
+.btn-small {
+    font-size: 16px;
+}
+
+.btn-large {
+    font-size: 32px;
+}
+
+/* Tags */
+
+.tag {
+    background-color: var(--background-darkest);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--quality-normal);
+    font-size: 16px;
+    line-height: 40px;
+    padding: 8px 16px;
+}
+
+.tag-large {
+    font-size: 20px;
+    line-height: 44px;
+}
+
+/* Item Box */
+
+.item-box {
+    background-color: var(--background-darkest);
+    border: 2px solid var(--quality-normal);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+img.item-box-img {
+    width: 100%;
+}
+
+.item-box-effect {
+    background-color: var(--quality-normal);
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.2s;
+    z-index: 9;
+}
+
+.item-box:hover .item-box-effect {
+    opacity: 0.2;
+}
+
+/* Item Overview Box */
+
+.item-info-box {
+    background: linear-gradient(to bottom, var(--item-gradient-top), var(--item-gradient-bottom));
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 40px;
+    text-align: center;
+    width: auto;
+}
+
+.item-info-box-title {
+    color: var(--quality-normal);
+    font-family: 'Tf2build', sans-serif;
+    font-size: 20px;
+}
+
+.item-info {
+    color: var(--item-title);
+}
+
+.item-info-stats {
+    color: var(--neutral-att);
+    list-style: none;
+    padding: 0;
+}
+
+/* Tables */
+
+table {
+    border-collapse: collapse;
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+tr {
+    background-color: var(--background-darkest);
+    margin-bottom: 20px;
+}
+
+tr, th, td {
+    border-bottom: 10px solid var(--background-dark);
+}
+
+th, td {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.dark-table tr, .dark-table th, .dark-table td {
+    border-bottom: 10px solid var(--neutral-att);
+}
+
+/* Kill Feed */
+
+.kill-feed {
+    background-color: var(--killfeed-light);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--background-dark);
+    display: inline-block;
+    padding: 15px;
+}
+
+.dark-kill {
+    background-color: var(--background-darkest);
+    color: var(--text-regular);
+}
+
+/* Text Colour & Border Colours */
+
+.dark {
+    color: var(--background-dark);
+}
+
+.background-light {
+    background-color: var(--neutral-att);
+}
+
+.unique {
+    border-color: var(--quality-unique);
+    color: var(--quality-unique);
+}
+
+.vintage {
+    border-color: var(--quality-vintage);
+    color: var(--quality-vintage);
+}
+
+.genuine {
+    border-color: var(--quality-genuine);
+    color: var(--quality-genuine);
+}
+
+.strange {
+    border-color: var(--quality-strange);
+    color: var(--quality-strange);
+}
+
+.unusual {
+    border-color: var(--quality-unusual);
+    color: var(--quality-unusual);
+}
+
+.haunted {
+    border-color: var(--quality-haunted);
+    color: var(--quality-haunted);
+}
+
+.collectors {
+    border-color: var(--quality-collectors);
+    color: var(--quality-collectors);
+}
+
+.decorated {
+    border-color: var(--quality-decorated);
+    color: var(--quality-decorated);
+}
+
+.community {
+    border-color: var(--quality-community);
+    color: var(--quality-community);
+}
+
+.valve {
+    border-color: var(--quality-valve);
+    color: var(--quality-valve);
+}
+
+.red {
+    border-color: var(--teamspirit-red);
+    color: var(--teamspirit-red);
+}
+
+.blu {
+    border-color: var(--teamspirit-blu);
+    color: var(--teamspirit-blu);
+}
+
+.att-positive {
+    color: var(--positive-att);
+}
+
+.att-negative {
+    color: var(--negative-att);
+}
+
+.highlight {
+    color: var(--text-highlight);
+}
+
+/* Background classes */
+
+.default-bg {
+    background-color: var(--quality-normal);
+}
+
+.unique-bg {
+    background-color: var(--quality-unique);
+}
+
+.vintage-bg {
+    background-color: var(--quality-vintage);
+}
+
+.genuine-bg {
+    background-color: var(--quality-genuine);
+}
+
+.strange-bg {
+    background-color: var(--quality-strange);
+}
+
+.unusual-bg {
+    background-color: var(--quality-unusual);
+}
+
+.haunted-bg {
+    background-color: var(--quality-haunted);
+}
+
+.collectors-bg {
+    background-color: var(--quality-collectors);
+}
+
+.decorated-bg {
+    background-color: var(--quality-decorated);
+}
+
+.community-bg {
+    background-color: var(--quality-community);
+}
+
+.valve-bg {
+    background-color: var(--quality-valve);
+}
