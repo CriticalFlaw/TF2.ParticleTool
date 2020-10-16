@@ -30,7 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.9" />
+    <PackageReference Include="Autoupdater.NET.Official" Version="1.6.3" />
+    <PackageReference Include="log4net" Version="2.0.11" />
   </ItemGroup>
 
   <ItemGroup>

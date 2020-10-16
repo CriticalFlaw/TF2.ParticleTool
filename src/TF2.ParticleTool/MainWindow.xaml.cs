@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
+using AutoUpdaterDotNET;
 using log4net;
 using log4net.Config;
 using Microsoft.Win32;
@@ -29,6 +30,8 @@ namespace TF2.ParticleTool
             Logger.Info("INITIALIZING");
             InitializeComponent();
             CheckForFiles();
+            AutoUpdater.OpenDownloadPage = true;
+            AutoUpdater.Start("https://raw.githubusercontent.com/CriticalFlaw/TF2.ParticleTool/master/Update.xml");
         }
 
         /// <summary>
